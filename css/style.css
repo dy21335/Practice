@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #F39C12 ;
+}
+.a{
+    padding: 20px;
+    background-color: #808B96;
+    margin: 0 auto;
+    text-align: center;
+}
+
+p,h1{
+    background-color: #808B96;
+}
