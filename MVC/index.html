@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body{
+        background-color: #7DCEA0;
+    }
+
+    .container{
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin-top: -150px;
+        margin-left: -100px;
+        height: 250px;
+        width: 200px;
+        padding: 20px;
+        background-color: #EB984E;
+        text-align: center;
+        box-shadow: 1px 1px 10px #EB984E;
+        border-radius: 5px;
+    }
+
+    #citySel{
+        display: block;
+        width:150px;
+        margin:0 auto;
+    }
+
+    .wrapper{
+        width:150px;
+        margin: 10px auto;
+    }
+    #cityInput{
+        width: 100px;
+        height: 20px;
+    }
+
+    #addBtn{
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 3px;
+        width: 36px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 8px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+<body>
+
+<div class="container">
+    <select id="citySel" size="10">
+    </select>
+    <div class="wrapper">
+        <input id="cityInput" type="text" value="">
+        <button id="addBtn">  Add  </button>
+    </div>
+
+</div>
+
+
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+
+    <script type="text/javascript" src="LabelView.js"></script>
+</body>
+</html>
