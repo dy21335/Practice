@@ -29,6 +29,7 @@ var Model = {
 
     CityList : ['广州','深圳','珠海'],
 
+    //实现发布者
     addCityEvent : new Event(this),
 
     addCityM : function (city) {
@@ -69,6 +70,7 @@ var CityView = {
 
     addBtnHandler : function () {
         console.log(this.cityInput.value.trim());
+        //当要添加数据时，调用controller与model进行通信；
         this.controller.incrementCity(this.cityInput.value.trim());
         this.cityInput.value ="";
     },
@@ -120,6 +122,7 @@ var Controller = {
         this.model = model;
 
         this.view.init(this);
+        //将view作为订阅者
         this.model.addCityEvent.attach(this.view);
     },
 
@@ -135,19 +138,4 @@ var Controller = {
 
 
 Controller.init(CityView, Model);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

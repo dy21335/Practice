@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+
+    }
+    body{
+        background-color: #7DCEA0;
+    }
+    #app{
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin-top: -150px;
+        margin-left: -100px;
+        height: 250px;
+        width: 200px;
+        padding: 20px;
+        background-color: #EB984E;
+        text-align: center;
+        box-shadow: 1px 1px 10px #EB984E;
+        border-radius: 5px;
+    }
+
+</style>
+<body>
+<div id="app">
+    <h2>{{title}}</h2>
+    <input v-model="name">
+    <h1>{{name}}</h1>
+</div>
+
+<script src="Compile.js"></script>
+<script src="Observer.js"></script>
+<script src="Watcher.js"></script>
+<script type="text/javascript" src="vue.js"></script>
+
+</body>
+<script type="text/javascript">
+
+    var selfVue = new SelfVue({
+        el: '#app',
+        data: {
+            title: "hello world",
+            name: 'hello vue'
+        }
+    });
+</script>
+</html>
