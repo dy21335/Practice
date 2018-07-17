@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .strech{
+        position: relative;
+        background-color: #FFF3E0;
+        width: 100px;
+        height: 100px;
+        margin: 30px auto;
+    }
+    .strech:before{
+        transform: scaleX(0);
+    }
+    .strech:after{
+        transform: scaleY(0);
+    }
+
+    .strech:before,.strech:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        pointer-events: none;
+    }
+    .strech:hover::before{
+        transform: scaleX(1);
+        border-top: 1px solid #F0B27A;
+        border-bottom: 1px solid #F0B27A;
+    }
+    .strech:hover::after{
+        transform: scaleY(1);
+        border-left: 1px solid #F0B27A;
+        border-right: 1px solid #F0B27A;
+    }
+    .strech:hover::before,.strech:hover::after{
+        transition: transform .2s linear;
+    }
+
+    .flyIn{
+        position: relative;
+        background-color: #FFF3E0;
+        width: 100px;
+        height: 100px;
+        margin: 60px auto;
+    }
+    .flyIn:before{
+        transform: scaleY(1.3) rotate(30deg);
+    }
+    .flyIn:after{
+        transform: scaleX(1.3) rotate(30deg);
+    }
+
+    .flyIn:before,.flyIn:after{
+        opacity: 0;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        pointer-events: none;
+    }
+    .flyIn:hover::before{
+        transform: scaleY(1) rotate(0);
+        border-top: 1px solid #F0B27A;
+        border-bottom: 1px solid #F0B27A;
+    }
+    .flyIn:hover::after{
+        transform: scaleX(1) rotate(0);
+        border-left: 1px solid #F0B27A;
+        border-right: 1px solid #F0B27A;
+    }
+    .flyIn:hover::before,.flyIn:hover::after{
+        opacity: 1;
+        transition: opacity .2s , transform .2s linear;
+    }
+</style>
+<body>
+<div class="strech"></div>
+<div class="flyIn"></div>
+</body>
+</html>
