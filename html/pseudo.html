@@ -82,9 +82,53 @@
         opacity: 1;
         transition: opacity .2s , transform .2s linear;
     }
+
+    .wrapper{
+        text-align: center;
+        background-color: gray;
+        color: white;
+        width: 200px;
+        height: 50px;
+        margin: 60px auto;
+        overflow: hidden;
+    }
+    .bracket{
+        position: relative;
+        display:inline-block;
+        padding: 10px;
+    }
+    .bracket:hover{
+        cursor: default;
+    }
+    .bracket:before{
+        content: '【';
+    }
+    .bracket:after{
+        content: '】';
+    }
+
+    .bracket:before,.bracket:after{
+        opacity: 0;
+        position: relative;
+        display: inline-block;
+        pointer-events: none;
+        transform: scale(1);
+        transition: all .2s linear;
+    }
+    .bracket:hover::before{
+        transform: translateX(-10px) scaleY(1.2);
+    }
+    .bracket:hover::after{
+        transform: translateX(10px) scaleX(1.2);
+    }
+    .bracket:hover::before,.bracket:hover::after{
+        opacity: 1;
+        transition: all .2s linear;
+    }
 </style>
 <body>
 <div class="strech"></div>
 <div class="flyIn"></div>
+<p class="wrapper"><a class="bracket">coding</a></p>
 </body>
 </html>
