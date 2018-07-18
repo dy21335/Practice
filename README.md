@@ -14,6 +14,8 @@ https://github.com/dy21335/Practice/tree/master/css
 https://github.com/dy21335/Practice/tree/master/MVVM
 
 ## 伪元素：befor 与 ：after 的有趣效果：
+https://github.com/dy21335/Practice/blob/master/html/pseudo.html
 
 ## css实现三角形：
+https://github.com/dy21335/Practice/blob/master/html/triangle.html
 
