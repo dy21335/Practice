@@ -4,7 +4,8 @@ about: Suggest an idea for this project
 
 ---
 
-**所遇到的问题**
+**预期的行为和实际行为。**
 
-**重新这个问题的步骤**
+
+**重现问题的步骤**
 
