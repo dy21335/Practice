@@ -1,17 +1,17 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest an idea for base-component
 
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+**你的功能需求是否和一些问题（bug）有关？**
+清晰、简要地描述这些问题
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+**是否是已有组件**
+是/否
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**组件名**
+请填写该组件的名称
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+**描述**
+清晰明了地描述你希望发生的事情

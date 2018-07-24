@@ -1,11 +1,18 @@
 ---
 name: Bug request
-about: Suggest an idea for this project
+about: Create a report to help us improve base-component
 
 ---
 
-**预期的行为和实际行为。**
+* 版本: 
+* 系统及运行环境:
+
+**期待的行为**
+清晰、简明地描述你期待的行为
+
+**实际表现**
+清晰、简明地对实际的表现进行描述
 
 
-**重现问题的步骤**
-
+**重现步骤**
+清晰地描述重现步骤，可搭配截图
