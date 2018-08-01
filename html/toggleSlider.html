@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/style.css" >
+</head>
+<style>
+#wrap {
+    height: 200px;
+    width: 200px;
+    border: 1px solid #ccc;
+}
+#slider {
+    overflow-y: hidden;
+    max-height: 200px;
+    -webkit-transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+    transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+    background: pink;
+    height: inherit; 
+    width: inherit;
+}
+#toggle {
+    display: none;
+}
+#toggle + label {
+    padding: 1px 6px;
+    text-align: center;
+    border-radius: 2px;
+    background: rgb(221, 221, 221);
+    border: 1px outset buttonface;
+    margin-bottom: 2px;
+    display: inline-block;
+    cursor: pointer;
+}
+/* most important part is here: */
+#toggle:checked ~ #wrap > #slider {
+    max-height: 0;
+}
+</style>
+<body>
+    <h1><mark>PURE CSS</mark> Slide Up and Slide Down</h1>
+    <input id="toggle" type="checkbox"><label for="toggle">toggle slider</label>
+    <div id="wrap">
+        <div id="slider">
+            <p>Blah blah blah blah blah....</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
