@@ -18,4 +18,7 @@ https://github.com/dy21335/Practice/blob/master/html/pseudo.html
 
 ## css实现三角形：
 https://github.com/dy21335/Practice/blob/master/html/triangle.html
+      
+## toggleSlider:
+https://github.com/dy21335/Practice/blob/master/html/toggleSlider.html
 
