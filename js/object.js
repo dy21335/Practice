@@ -1,23 +1,25 @@
-function Father() {
-    this.v = "father";
-    this.aa = [1,2];
+function Father(name) {
+    this.name = name;
+    this.a = ['a','b','c'];
 }
 
-function Son() {
-    this.a = "son";
+Father.prototype.sayName = function () {
+    console.log(this.name)
 }
 
-Son.prototype = new Father();
+function Son(name) {
+    //继承属性
+    Father.call(this,name);//第一次调用父类构造函数
+    this.sontest = 'i am son property'
+}
 
-var son1 = new Son();
-var son2 = new Son();
-son1.aa.push(3);
-console.log(son1.v);//
-son1.v = "jo";
-console.log(son1.aa);
-console.log(son2.aa);
-console.log(son1.v);
-console.log(son2.v);
+//继承方法
+Son.prototype = Father.prototype;//第二次调用父类构造函数
+son1 = new Son('haha');
+son2 = new Son('haha2');
+son1.sayName();
+son2.sayName();
+console.log(son1.constructor);
 
 
 

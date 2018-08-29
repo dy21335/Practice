@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .div {
+            position: relative;
+            width: 300px;
+            background: rgba(0, 140, 255, 0.616);
+            padding: 50px;
+            color: #fff;
+            border-radius: 15px;
+            text-align:center;
+            vertical-align:middle;
+            display: table-cell;
+            background: linear-gradient(210deg, transparent 1.5em, rgba(0, 140, 255, 0.616) 0);
+        }
+        .div::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1.73em;
+            height: 3em;
+            background: linear-gradient(240deg, transparent 50%, rgba(0, 140, 255, 0.616) 0);
+            transform: translateY(-1.3em) rotate(-30deg);
+            transform-origin: bottom right;
+            border-bottom-left-radius: inherit;
+            box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(25, 0, 255, 0.226);
+        }
+    </style>
+</head>
+
+<body>
+<div class='div'> 春花秋月何时了？ 往事知多少？小楼昨夜又东风，故国不堪回首月明中。 雕栏玉砌应犹在，只是朱颜改。 问君能有几多愁？恰似一江春水向东流。</div>
+</body>
+</html>
