@@ -20,7 +20,7 @@ https://github.com/dy21335/Practice/blob/master/html/pseudo.html
 https://github.com/dy21335/Practice/blob/master/html/triangle.html
 
 ## css伪类实现折角效果：
-
+https://github.com/dy21335/Practice/blob/master/html/%E6%8A%98%E8%A7%92%E6%95%88%E6%9E%9C.html
       
 ## toggleSlider:
 https://github.com/dy21335/Practice/blob/master/html/toggleSlider.html
