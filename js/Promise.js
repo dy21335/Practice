@@ -77,6 +77,7 @@ function fn3() {
 
 console.log(fn1().then(fn2).then(fn3))
 
+
 //输出结果:
 //1
 //2
