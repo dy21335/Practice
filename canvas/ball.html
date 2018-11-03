@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazing Canvas</title>
+    <script type="text/javascript" src="./compass/tool.js"></script>
+</head>
+<style>
+    .box {
+        position: absolute;
+        top: 10px;
+        left: 450px;
+    }
+</style>
+<body>
+<div class="point">
+    <button id="addBall">匀减速运动</button>
+    <button id="addBcBall">弹跳小球</button>
+</div>
+<canvas id="myCanvas" width="400" height="300" style="background:#333"></canvas>
+</body>
+
+<script type="text/javascript">
+    var canvas,
+        ctx,
+        ball,
+        bcball,
+        stop;   //记录动画ID
+    canvas = document.getElementById('myCanvas');
+    ctx = canvas.getContext('2d');
+
+    //匀减速小球；
+    function Ball(radius, x, y, v){
+        this.radius = radius;
+        this.x = x;
+        this.y = y;
+        this.v = v;
+        this.a = ((Math.pow(v,2)/(2*(canvas.width-x))))*(-1);
+    }
+
+    //弹跳小球；
+    function BcBall(radius, x, y, v){
+        this.radius = radius;
+        this.x = x;
+        this.y = y;
+        this.v = v;
+        this.gravity = 0.5;
+        this.damping = -0.8;
+    }
+
+    document.getElementById("addBall").addEventListener('click', function() {
+        var newBall = new Ball(10, 10, 0, 8);
+        ball = newBall;
+        drawBall();
+    });
+
+    document.getElementById("addBcBall").addEventListener('click', function() {
+        var newBall = new BcBall(10, 10, 0, 5);
+        ball = newBall;
+        drawBcBall();
+    });
+
+    //绘制匀减速小球；
+    function drawBall(){
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#fff';
+        ctx.beginPath();
+
+        ball.v += ball.a;
+        ball.x += ball.v;
+
+        ball.x = (ball.x + ball.radius > canvas.width) ? (canvas.width - ball.radius) : ball.x;
+
+        ctx.arc(ball.x, canvas.height/2, ball.radius, 0, 2 * Math.PI, true);
+        ctx.fill();
+
+        stop = ball.x + ball.radius >= canvas.width ? cancelAnimationFrame(stop) : requestAnimationFrame(drawBall);
+    }
+
+    //绘制弹性小球;
+    var preV = 0;   //记录前一次速度
+
+    function drawBcBall() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#fff';
+        ctx.beginPath();
+
+        ball.v += ball.gravity;
+        ball.y += ball.v;
+        preV = ball.v;
+
+
+        ctx.arc(canvas.width/2, ball.y, ball.radius, 0, 2 * Math.PI, true);
+        ctx.fill();
+        stop = requestAnimationFrame(drawBcBall);
+
+
+        if(ball.y + ball.radius >= canvas.height){
+            ball.y = canvas.height - ball.radius;
+            ball.v *= ball.damping;
+            if(Math.abs(preV - ball.v) < 0.5){
+                cancelAnimationFrame(stop);
+            }
+        }
+    }
+</script>
+</html>
